@@ -1,0 +1,924 @@
+/* =========Dorsin HTML Template layout=======
+ redesign for practice purpose based on html and css only
+ by Mohammad Kamrul Hasan-------------*/
+
+
+/* google font link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Templete Default Css */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #95A0AB;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a,
+.btn,
+.btn-white,
+.hover-effect {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn:focus,
+.btn-white:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/* Custom css */
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container:before,
+.container:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.col-70 {
+    width: 70%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.col-50 {
+    width: 50%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.col-33 {
+    width: 33.33%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.col-30 {
+    width: 30%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.col-25 {
+    width: 25%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.col-15 {
+    width: 15%;
+    float: left;
+    padding: 0 1.5rem;
+}
+
+.hover-effect:hover {
+    transform: translateY(-1.5rem);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-red {
+    color: #FB3E3E;
+}
+
+.btn,
+.btn-white {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    padding: 1rem 2.5rem;
+    background: #FB3E3E;
+}
+
+.btn-white {
+    background-color: #fff;
+    border: none;
+    color: #212529;
+}
+
+.btn:hover {
+    transform: translateY(-0.5rem);
+    border-color: #fc0244;
+}
+
+.btn-white:hover {
+    transform: translateY(-0.5rem);
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    background-color: rgba(44, 43, 43, 0.979);
+}
+
+.shadow-box {
+    box-shadow: 0 0 1.25rem 0.5rem rgba(234, 178, 137, 0.11);
+}
+
+.bg-light-blue {
+    background: #F8F9FA;
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-padding-top {
+    padding-top: 80px;
+}
+
+.section-padding-bottom {
+    padding-bottom: 80px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+
+/* ====== Body Animation Css ======= */
+
+.animated-gear-box {
+    background-color: #2B2424;
+    position: fixed;
+    left: 0;
+    top: 20%;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    z-index: 100;
+}
+
+@keyframes animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animation-image {
+    width: 2rem;
+    height: 2rem;
+    animation: animation 2s linear 0s infinite;
+}
+
+
+/* ====== 01 Home Section css ====== */
+
+.header-home {
+    background: url('../images/home-bg.jpg') no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.header-home::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #623FAC, #743081);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+
+/* Nav Menu Bar Css */
+
+.nav-bar .container {
+    padding: 2.5rem 0px;
+    line-height: 2.5rem;
+}
+
+.brand-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    font-family: 'poppins', sans-serif;
+    padding: 1.1rem 0;
+    letter-spacing: 0.3rem;
+}
+
+.nav-bar-list {
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+.active {
+    color: #fff;
+}
+
+.nav-bar-list-items-link {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding-right: 4rem;
+}
+
+.nav-bar-list-items-link:hover {
+    color: #fff;
+}
+
+.nav-bar-button {
+    float: right;
+}
+
+.nav-bar-button .btn {
+    border-radius: 5rem;
+}
+
+
+/* Home Contents */
+
+.home-content-header {
+    font-size: 4.5rem;
+    line-height: 6rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0 20rem;
+}
+
+.home-content-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1.5rem 20rem;
+    color: #cecbcb;
+    display: inline-block;
+}
+
+.home-media-play {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+
+/* ====== 02 Service Section Css ====== */
+
+
+/* section title */
+
+.section-title-heading {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.section-title-heading:after {
+    content: '';
+    position: absolute;
+    background: #FB3E3E;
+    width: 5rem;
+    height: 0.2rem;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+
+.section-title-texts {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    padding: 1rem 18rem;
+    margin-bottom: 5rem;
+}
+
+
+/* Service Category Boxes Css */
+
+.services-category-single-item {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.services-category-single-item i {
+    font-size: 4rem;
+    width: 7rem;
+    height: 7rem;
+    text-align: center;
+    line-height: 7rem;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: 1rem;
+}
+
+.services-category-single-item i:hover {
+    color: #fff;
+    background: #FB3E3E;
+}
+
+.service-category-single-item-heading {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-transform: capitalize;
+}
+
+.service-category-single-item-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.05rem;
+    padding-bottom: 2rem;
+}
+
+
+/* ====== 03 Features Section Css ====== */
+
+
+/* features-left */
+
+.features-content-left-heading {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+}
+
+.features-content-left-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 3rem 0;
+}
+
+.features-content-left-list-items {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 1.5rem;
+    list-style: circle;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.features-content-left-list-items:before {
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #FB3E3E;
+    left: 0;
+    top: 1rem;
+    border-radius: 50%;
+}
+
+.fa-arrow-right {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+}
+
+
+/* Feature Right Content */
+
+.feautres-content-right img {
+    width: 100%;
+    display: block;
+    margin-left: 8rem;
+}
+
+
+/* ====== 04 Dream Section CSS ====== */
+
+.dream {
+    background: url('../images/home-bg.jpg') no-repeat center/cover;
+    width: 100%;
+}
+
+.back-add-image {
+    position: relative;
+    z-index: 1;
+}
+
+.back-add-image::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #623FAC, #743081);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    opacity: 0.9;
+}
+
+.bg-pattern-layout {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.add-image-heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.add-image-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0 26rem;
+    color: #f4f4f4;
+}
+
+.dream-button {
+    margin: 4rem 0;
+}
+
+
+/* ====== 05 Pricing Section Css====== */
+
+.package-pricing-content-single-box {
+    padding: 5rem 4rem;
+    background: #fff;
+    border: 0.1rem solid #ddd;
+    border-radius: 2rem;
+}
+
+.package-price {
+    border-bottom: 0.1rem solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.package-price>* {
+    margin-bottom: 0.5rem;
+}
+
+.package-price-heading {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+.package-price-value {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-transform: capitalize;
+}
+
+.package-price-billing {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.package-details-items {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: #212529;
+    text-transform: capitalize;
+    padding-bottom: 2rem;
+}
+
+.pricing-button {
+    margin-top: 1.5rem;
+}
+
+
+/* ====== 06 Team Member Section Css ====== */
+
+.team-member-single-box {
+    border-bottom: 1px solid #ddd;
+}
+
+.team-member-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-member-image-box {
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-member-name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-transform: capitalize;
+    padding-top: 1rem;
+}
+
+.team-member-designation {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
+    display: block;
+    text-transform: uppercase;
+}
+
+
+/* ====== 07 Work Progress Section CSS====== */
+
+.straight-line {
+    position: relative;
+}
+
+.straight-line:before {
+    position: absolute;
+    content: '';
+    border-top: 1px dashed #bfbbbb;
+    width: 75%;
+    right: -14rem;
+    top: 35%;
+    z-index: 2;
+}
+
+.straight-line .icon {
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    background: #fb3e3e;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4rem;
+    position: absolute;
+    right: -3.5rem;
+    top: 22%;
+    z-index: 3;
+}
+
+.work-process-content-single-box i {
+    font-size: 5rem;
+    line-height: 7rem;
+}
+
+.work-process-content-heading {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding-top: 1rem;
+}
+
+.work-process-content-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+
+.work-process-content-button .btn {
+    position: relative;
+    margin-top: 5rem;
+}
+
+
+/* ====== 08 Client Review Section CSS====== */
+
+.review-content-client-image {
+    margin-bottom: -4.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 9rem;
+    height: 9rem;
+    max-width: 100%;
+}
+
+.review-content-box {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 6rem 2rem 2rem;
+}
+
+.review-content-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 2.5rem;
+}
+
+.reviewer-name-place {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+
+.place {
+    text-transform: capitalize;
+    color: #95a0ab;
+}
+
+
+/* ====== 09 Get Started Section Css ====== */
+
+.get-started {
+    background: url('../images/started-bg.jpg') no-repeat center/cover;
+    width: 100%;
+}
+
+.get-started-button {
+    margin: 4rem 0;
+}
+
+
+/* ====== 10 Blog Section Css====== */
+
+.blog-content-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-content-box-name {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #95a0ab;
+    padding: 1.5rem 0;
+}
+
+.blog-content-box-heading {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.blog-content-box-heading:hover .blog-content-box-heading-link {
+    color: #FB3E3E;
+}
+
+.blog-content-box-text {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+
+.blog-content-box-link {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+.blog-content-box-link:hover {
+    color: #212529;
+}
+
+
+/* ====== 11 Contact Section Css====== */
+
+.contact-details-content-left-list-items {
+    padding-bottom: 2rem;
+}
+
+.list-item-heading {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.list-item-description {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1rem 5rem 1rem 0;
+    display: block;
+}
+
+#name,
+#email,
+#subject,
+#message {
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+#name {
+    display: inline-block;
+    width: 49%;
+    margin-right: 1.3rem;
+}
+
+#email {
+    display: inline-block;
+    width: 49%;
+}
+
+#subject {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+#message {
+    height: 15rem;
+}
+
+.form-button {
+    margin-top: 2rem;
+    float: right;
+    cursor: pointer;
+}
+
+
+/* ====== 12 Social Contact Css====== */
+
+.social-contact-content {
+    padding: 3rem 0;
+}
+
+.social-icon-list-items-link i {
+    font-size: 1.8rem;
+    width: 5rem;
+    height: 5rem;
+    border: 0.3rem solid #ddd;
+    text-align: center;
+    line-height: 4.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.social-icon-list-items-link:hover i {
+    color: #FB3E3E;
+}
+
+.contact-nummber {
+    font-size: 2rem;
+    color: #212529;
+    line-height: 5rem;
+    padding-left: 8rem;
+}
+
+.contact-email {
+    font-size: 2rem;
+    color: #212529;
+    line-height: 5rem;
+}
+
+.email-address {
+    padding-left: 0.5rem;
+}
+
+
+/* ====== 13 Footer Section CSS====== */
+
+.footer-section {
+    background: #272A33;
+}
+
+.footer-single-box-heading {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    padding-bottom: 2rem;
+}
+
+.footer-single-box-list-itmes {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.footer-single-box-list-itmes:hover a {
+    color: #fff;
+}
+
+.footer-single-box-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+.subscribe form {
+    position: relative;
+}
+
+.subscribe input {
+    background: #2E313A;
+    border: none;
+    padding: 1.2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.subscribe button {
+    background: transparent;
+    border: none;
+    color: #acacac !important;
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+input::placeholder {
+    color: #6c757d;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+
+/* ====== 14 Copyright Section CSS ====== */
+
+.copyright {
+    background-color: #2E313A;
+    padding: 2rem 0;
+}
+
+.copyright-text {
+    font-size: 1.4rem;
+    line-height: 4rem;
+}
+
+.payment-method-image {
+    width: 15rem;
+    height: auto;
+    float: right;
+}
+
+
+/* ====== The End ====== */
