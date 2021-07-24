@@ -892,6 +892,7 @@ input:focus {
     position: absolute;
     right: 10px;
     top: 7px;
+ cursor: pointer;
 }
 
 input::placeholder {
